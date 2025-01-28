@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "openAiResourceName": {
+      "value": "openai"
+    },
+    "openAiResourceLocation": {
+      "value": "${AZURE_OPENAI_RESOURCE_LOCATION}"
+    },
+    "openAiApiVersion": {
+      "value": "${AZURE_OPENAI_API_VERSION=2024-08-01-preview}"
+    },
+    "openAi_4_DeploymentName": {
+      "value": "gpt-4o-mini"
+    },
+    "openAi_4_ModelName": {
+      "value": "gpt-4o-mini" 
+    },
+    "openAi_4_ModelVersion": {
+      "value": "${AZURE_OPENAI_MODEL_VERSION=2024-05-13}"
+    },
+    "openAi_4_eval_DeploymentName": {
+      "value": "gpt-4o-mini2"
+    },
+    "openAi_4_eval_ModelName": {
+      "value": "gpt-4o-mini"
+    },
+    "openAi_4_eval_ModelVersion": {
+      "value": "2024-07-18"
+    },
+    "openAiEmbeddingDeploymentName": {
+      "value": "text-embedding-ada-002"
+    },
+    "principalId": {
+      "value": "084ba6bf-0158-4a2a-8d57-6077746b0047" 
+    },
+    "runningOnGh": {
+      "value": "${GITHUB_ACTIONS}"
+    },
+    "runningOnAdo": {
+      "value": "${TF_BUILD}"
+    }
+  }
+}
